@@ -3,11 +3,12 @@ class Solver
     word.reverse
   end
 
-  def fizzbuzz(n)
-   return "fizzbuzz" if n % 3 == 0 && n % 5 == 0 
-   return "fizz" if n % 3 == 0
-   return "buzz" if n % 5 == 0
-   n.to_s
+  def fizzbuzz(num)
+    return 'fizzbuzz' if (num % 3).zero? && (num % 5).zero?
+    return 'fizz' if (num % 3).zero?
+    return 'buzz' if (num % 5).zero?
+
+    num.to_s
   end
 end
 
