@@ -10,12 +10,12 @@ class Solver
 
     num.to_s
   end
-  def factorial(n)
-    if n < 0
-      raise ArgumentError , "Factorial is not defined for negative integers."
-    end
-    return 1 if n == 0
-    n * factorial(n - 1)
+
+  def factorial(num)
+    raise ArgumentError, 'Factorial is not defined for negative integers.' if num.negative?
+    return 1 if num.zero?
+
+    num * factorial(num - 1)
   end
 end
 
