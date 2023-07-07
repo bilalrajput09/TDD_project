@@ -10,6 +10,13 @@ class Solver
 
     num.to_s
   end
+  def factorial(n)
+    if n < 0
+      raise ArgumentError , "Factorial is not defined for negative integers."
+    end
+    return 1 if n == 0
+    n * factorial(n - 1)
+  end
 end
 
 solve = Solver.new
